@@ -1,0 +1,13 @@
+<%= render "layouts/errors", :object => @project%>
+
+<%=form_for @project do |f| %>
+<%= f.label :project %>
+<%= f.text_field :project_name %>
+
+<%= f.label :description %>
+<%= f.text_field :project_description %>
+
+<%= f.label :link %>
+<%= f.text_field :link %>
+<%= f.submit %>
+<%end%>

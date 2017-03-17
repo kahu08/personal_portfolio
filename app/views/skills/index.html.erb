@@ -1,0 +1,10 @@
+<h1>Skills#index</h1>
+<p>Find me in app/views/skills/index.html.erb</p>
+
+<ul>
+  <% @skills.each do |skill|%>
+  <li><%= link_to skill.language%></li>
+  <%end%>
+</ul>
+
+<p><%= link_to "Add language", new_skill_path %></p>
