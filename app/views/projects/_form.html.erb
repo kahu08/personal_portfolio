@@ -1,13 +1,25 @@
 <%= render "layouts/errors", :object => @project%>
 
-<%=form_for [@skill, @project] do |f| %>
+<%=form_for [@skill, @project], html: {multipart: true} do |f| %>
+<p>
 <%= f.label :project %>
 <%= f.text_field :project_name %>
+</p>
 
+<p>
 <%= f.label :description %>
 <%= f.text_field :project_description %>
+</p>
 
+<p>
+<%= f.label :image %>
+<%= f.file_field :image %>
+</p>
+
+<p>
 <%= f.label :link %>
 <%= f.text_field :link %>
+</p>
+
 <%= f.submit %>
 <%end%>

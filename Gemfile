@@ -25,4 +25,7 @@ source 'https://rubygems.org'
     gem 'spring-watcher-listen', '~> 2.0.0'
   end
 
+  gem 'countries', '~> 2.0', '>= 2.0.8'
+  gem 'paperclip', '~> 5.1'
+  gem 'devise', '~> 4.2', '>= 4.2.1'
   gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

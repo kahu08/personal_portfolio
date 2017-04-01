@@ -1,7 +1,9 @@
 <%= render "layouts/errors", :object => @skill%>
 
-<%=form_for @skill do |f| %>
+<%=form_for @skill,html: {multipart: true} do |f| %>
 <%= f.label :language %>
 <%= f.text_field :language %>
+<%= f.label :image %>
+<%= f.file_field :image %>
 <%= f.submit %>
 <%end%>

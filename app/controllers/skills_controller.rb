@@ -1,6 +1,8 @@
 class SkillsController < ApplicationController
+  before_action :authenticate_user!, except: [:index, :show]
   def index
     @skills = Skill.all
+
   end
 
   def show
@@ -8,11 +10,12 @@ class SkillsController < ApplicationController
   end
 
   def new
-    @skill = Skill.new
+    # @skill = Skill.new
+    @skill = current_user.skills.build
   end
 
   def create
-    @skill = Skill.new(list_params)
+    @skill = current_user.skills.build(list_params)
     if @skill.save
       redirect_to skills_path
     else
@@ -32,6 +35,6 @@ class SkillsController < ApplicationController
 
   private
     def list_params
-      params.require(:skill).permit(:language)
+      params.require(:skill).permit(:language, :image)
     end
 end

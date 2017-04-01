@@ -1,4 +1,6 @@
 class ProjectsController < ApplicationController
+  before_action :authenticate_user!, except: [:index, :show]
+
   def show
     @project = Project.find(params[:id])
   end
@@ -41,6 +43,6 @@ class ProjectsController < ApplicationController
 
   private
   def project_params
-    params.require(:project).permit(:project_name, :project_description, :link)
+    params.require(:project).permit(:project_name, :project_description, :link  ,:image)
   end
 end

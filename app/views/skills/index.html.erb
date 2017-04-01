@@ -1,10 +1,49 @@
 <h1>Skills#index</h1>
 <p>Find me in app/views/skills/index.html.erb</p>
+<marquee behavior="scroll" direction="up" scrollamount="1">
+
+<p>Hey there. Welcome to my personal website where you can get to know more about me</p>
+<br>
+<br>
+<p>The name is Peter Kahurani</p>
+<p>+254 born with ambitions of outer space :)</p>
+<p>Software development is my specialty</p>
+<p>cars are my passion</p>
+<p>Avid rugby fan</p>
+<p>Food is the way to my heart. So feed me and i shall be able to tell you more</p>
+<p>FIN</p>
+  hello
+</marquee>
+
+<!-- trial on the styling  -->
+<ul id="sti-menu" class="sti-menu">
+	<li data-hovercolor="#37c5e9">
+		<a href="#">
+			<h2 data-type="mText" class="sti-item">
+				Some text
+			</h2>
+			<h3 data-type="sText" class="sti-item">
+				Some more text
+			</h3>
+			<span data-type="icon" class="sti-icon sti-icon-care sti-item">
+			</span>
+		</a>
+	</li>
+	<li>...</li>
+	...
+</ul>
+
+
+<!-- trial on the styling/end  -->
 
 <ul>
   <% @skills.each do |skill|%>
-  <li><%= link_to skill.language, skill_path(skill)%></li>
+  <li><%= link_to skill.language, skill_path(skill)%>
+    <%= image_tag(skill.image.url(:medium))%>
+  </li>
   <%end%>
 </ul>
 
+<% if user_signed_in? %>
 <p><%= link_to "Add language", new_skill_path %></p>
+<% end %>
