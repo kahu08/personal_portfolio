@@ -38,8 +38,7 @@
 
 <ul>
   <% @skills.each do |skill|%>
-  <li><%= link_to skill.language, skill_path(skill)%>
-    <%= image_tag(skill.image.url(:medium))%>
+  <li><%= link_to skill.language, skill_path(skill)%><%= image_tag(skill.image.url(:medium))%>
   </li>
   <%end%>
 </ul>
