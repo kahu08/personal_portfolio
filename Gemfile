@@ -26,6 +26,7 @@ source 'https://rubygems.org'
     gem 'spring-watcher-listen', '~> 2.0.0'
   end
 
+  gem 'ckeditor', '~> 4.2', '>= 4.2.2'
   gem 'simple_form', '~> 3.4'
   gem 'countries', '~> 2.0', '>= 2.0.8'
   gem 'paperclip', '~> 5.1'
