@@ -1,6 +1,6 @@
 <h1>Skills#index</h1>
 <p>Find me in app/views/skills/index.html.erb</p>
-<marquee behavior="scroll" direction="up" scrollamount="1">
+<!-- <marquee behavior="scroll" direction="up" scrollamount="1">
 
 <p>Hey there. Welcome to my personal website where you can get to know more about me</p>
 <br>
@@ -14,33 +14,92 @@
 <p>FIN</p>
   hello
 </marquee>
+<br> -->
+<div class="row">
+    <div class="col-md-4">
+        <ul class="flag demo-3 effect">
+            <li>
+                <figure>
 
-<!-- trial on the styling  -->
-<ul id="sti-menu" class="sti-menu">
-	<li data-hovercolor="#37c5e9">
-		<a href="#">
-			<h2 data-type="mText" class="sti-item">
-				Some text
-			</h2>
-			<h3 data-type="sText" class="sti-item">
-				Some more text
-			</h3>
-			<span data-type="icon" class="sti-icon sti-icon-care sti-item">
-			</span>
-		</a>
-	</li>
-	<li>...</li>
-	...
-</ul>
+                    <%=image_tag("kenya-flag.png", class:"top") %>
+                    <figcaption>
+                        <h2>+254 is my Land!</h2>
+                        <p>I am a proud citizen of Kenya.</p>
+                    </figcaption>
+                </figure>
+            </li>
+        </ul>
+    </div>
 
+    <div class="col-md-4">
+        <ul class="computer demo-3 effect">
+            <li>
+                <figure>
 
-<!-- trial on the styling/end  -->
+                    <%=image_tag("backlit.jpg", class:"top") %>
+                    <figcaption>
+                        <h2>Software development is my speciality</h2>
+                        <p>Just like King Arthur and his sword, I knew software development would be my life from the moment i lay my eyes on a keyboard.It was destiny you could say</p>
+                    </figcaption>
+                </figure>
+            </li>
+        </ul>
+    </div>
 
+    <div class="col-md-4">
+        <ul class="gear demo-3 effect">
+            <li>
+                <figure>
+
+                    <%=image_tag("gear.jpg", class:"top") %>
+                    <figcaption>
+                        <h2>Cars are my passion</h2>
+                        <p>When i'm not busy punching characters, you'll find me tinkering under the hood of cars or watching reruns of Top Gear as i marvel at the wonderful inventions of man in the automibile industry.</p>
+                    </figcaption>
+                </figure>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <ul class="rugby demo-3 effect">
+            <li>
+                <figure>
+
+                    <%=image_tag("rugby1.jpg", class:"ruby") %>
+                    <figcaption>
+                        <h2>Avid rugby fan</h2>
+                        <p>My oh my, what a wonderful sport.The effort and strategy that goes into scoring a try is what i love the most
+                        </p>
+                    </figcaption>
+                </figure>
+            </li>
+        </ul>
+    </div>
+
+    <div class="col-md-4">
+        <ul class="food demo-3 effect">
+            <li>
+                <figure>
+
+                    <%=image_tag("food.jpg", class:"top") %>
+                    <figcaption>
+                        <h2>Feed me and i'll tell you more.</h2>
+                        <p>Well there is so much to tell and too little a space but feed me and i could tell you more.Ps food is the way to my heart</p>
+                    </figcaption>
+                </figure>
+            </li>
+        </ul>
+    </div>
+
+</div>
 <ul>
-  <% @skills.each do |skill|%>
-  <li><%= link_to skill.language, skill_path(skill)%><%= image_tag(skill.image.url(:medium))%>
-  </li>
-  <%end%>
+    <% @skills.each do |skill|%>
+    <li><%= link_to skill.language, skill_path(skill)%><%= image_tag(skill.image.url(:medium))%>
+    </li>
+    <%end%>
 </ul>
 
 <% if user_signed_in? %>

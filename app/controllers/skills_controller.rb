@@ -10,7 +10,6 @@ class SkillsController < ApplicationController
   end
 
   def new
-    # @skill = Skill.new
     @skill = current_user.skills.build
   end
 
