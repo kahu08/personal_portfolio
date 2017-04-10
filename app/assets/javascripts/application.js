@@ -16,3 +16,9 @@
 //= require turbolinks
 //= require ckeditor/init
 //= require_tree .
+function blinker() {
+    $('.blink_me').fadeOut(500);
+    $('.blink_me').fadeIn(500);
+}
+
+setInterval(blinker, 1000); //Runs every second

@@ -1,20 +1,6 @@
 <h1>Skills#index</h1>
 <p>Find me in app/views/skills/index.html.erb</p>
-<!-- <marquee behavior="scroll" direction="up" scrollamount="1">
 
-<p>Hey there. Welcome to my personal website where you can get to know more about me</p>
-<br>
-<br>
-<p>The name is Peter Kahurani</p>
-<p>+254 born with ambitions of outer space :)</p>
-<p>Software development is my specialty</p>
-<p>cars are my passion</p>
-<p>Avid rugby fan</p>
-<p>Food is the way to my heart. So feed me and i shall be able to tell you more</p>
-<p>FIN</p>
-  hello
-</marquee>
-<br> -->
 <div class="row">
     <div class="col-md-4">
         <ul class="flag demo-3 effect">
@@ -95,13 +81,16 @@
     </div>
 
 </div>
-<ul>
+
+<div id="skills">
+  <ul>
     <% @skills.each do |skill|%>
     <li><%= link_to skill.language, skill_path(skill)%><%= image_tag(skill.image.url(:medium))%>
     </li>
     <%end%>
-</ul>
+  </ul>
 
-<% if user_signed_in? %>
-<p><%= link_to "Add language", new_skill_path %></p>
-<% end %>
+  <% if user_signed_in? %>
+  <p><%= link_to "Add language", new_skill_path %></p>
+  <% end %>
+</div>
