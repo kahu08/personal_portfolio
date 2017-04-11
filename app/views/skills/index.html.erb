@@ -1,6 +1,9 @@
-<h1>Skills#index</h1>
-<p>Find me in app/views/skills/index.html.erb</p>
-
+<h1>Peter Kahurani</h1>
+<br>
+<h3>Welcome to my portfolio where I try to show the world a bit about myself</h3>
+<br>
+<h3>Hover over the images and learn something about myself</h3>
+<br>
 <div class="row">
     <div class="col-md-4">
         <ul class="flag demo-3 effect">
@@ -81,11 +84,15 @@
     </div>
 
 </div>
+<!-- <hr width="50%" size="8" align="center"> -->
+  <hr style="color:black; font-size:50px;">
+  <h2>This are the skills I have been able to aquire thus far.In them are some of the projects I have worked on using the language listed</h2>
 
 <div id="skills">
   <ul>
     <% @skills.each do |skill|%>
-    <li><%= link_to skill.language, skill_path(skill)%><%= image_tag(skill.image.url(:medium))%>
+    <li><h3><%= image_tag(skill.image.url(:medium))%>
+      <%= link_to skill.language, skill_path(skill)%></h3>
     </li>
     <%end%>
   </ul>
