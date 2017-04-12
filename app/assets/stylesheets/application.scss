@@ -222,14 +222,16 @@ figure.hover figcaption {
 /*FOOTER STYLING*/
 .blink_me{
   color:green;
-  text-align:center;
-  float: center;
+  // text-align:center;
+  // float: center;
+  background-color: black;
 }
 
 #footer {
-    padding: 30px;
-    background-color: #067BC2;
-    color: black;
+    // padding: 30px;
+    // background-color: #067BC2;
+    background-color: black;
+    color: white;
     text-align: center;
 }
 
@@ -328,10 +330,13 @@ figure.hover figcaption {
 }
 
 .footnote {
-    background-color: #067BC2;
-    padding: 1px;
+    // background-color: #067BC2;
+    // padding: 1px;
+    border-color: black;
     text-align: center;
     color: white;
+    background-color: black;
+    margin: 0px;
 }
 
 

@@ -91,12 +91,9 @@
 <div id="skills">
   <ul>
     <% @skills.each do |skill|%>
-    <li><h3><%= image_tag(skill.image.url(:medium))%>
-      <%= link_to skill.language, skill_path(skill)%></h3>
-    </li>
+    <li><%= link_to skill_path(skill) do%><%= image_tag(skill.image.url(:medium))%><%= skill.language %><% end %></li>
     <%end%>
   </ul>
-
   <% if user_signed_in? %>
   <p><%= link_to "Add language", new_skill_path %></p>
   <% end %>
