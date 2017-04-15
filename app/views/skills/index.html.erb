@@ -1,9 +1,19 @@
-<h1>Peter Kahurani</h1>
+<%=image_tag("ranges.jpeg", class:"landing")%>
+  <h1 id="name">Peter Kahurani
+  </h1>
+<br>
+<div class="container">
+<h1 id="about">ABOUT</h1>
+<hr style="color:black; font-size:50px;">
+
 <br>
 <h3>Welcome to my portfolio where I try to show the world a bit about myself</h3>
 <br>
 <h3>Hover over the images and learn something about myself</h3>
 <br>
+<div class="rest">
+
+
 <div class="row">
     <div class="col-md-4">
         <ul class="flag demo-3 effect">
@@ -85,6 +95,10 @@
 
 </div>
 <!-- <hr width="50%" size="8" align="center"> -->
+<hr style="color:black; font-size:50px;">
+
+<h1 id="about">PORTFOLIO</h1>
+
   <hr style="color:black; font-size:50px;">
   <h2>This are the skills I have been able to aquire thus far.In them are some of the projects I have worked on using the language listed</h2>
 
@@ -97,4 +111,6 @@
   <% if user_signed_in? %>
   <p><%= link_to "Add language", new_skill_path %></p>
   <% end %>
+</div>
+</div>
 </div>

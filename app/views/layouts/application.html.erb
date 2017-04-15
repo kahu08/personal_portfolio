@@ -8,10 +8,11 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <script src="https://use.fontawesome.com/59c76c05a4.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
   </head>
 
   <body>
-    <div class="container">
+    <!-- <div class="container"> -->
       <%=link_to "Sign up", new_user_registration_path%>
       <%=link_to "Sign in", new_user_session_path%>
       <%= link_to 'log out', destroy_user_session_path, method: :delete %>
@@ -21,6 +22,10 @@
       <p class="alert"><%= alert %></p>
       <%= yield %>
     </div>
+    <div class="text-center" style="background-color:black; padding:100px; font-size:50px;">
+      <i class="fa fa-plus-square blink_me" aria-hidden="true">Accepting projects</i>
+    </div>
+    <br>
     <!-- footer -->
     <div id="footer">
 			<a href="http://twitter.com/" class="icon-button twitter"><i class="ion-social-twitter"></i><span></span></a>
@@ -30,9 +35,6 @@
 				<h4><span class="glyphicon glyphicon-envelope"></span> EMAIL: peterkahurani@gmail.com</h4>
 				<h4><span class="glyphicon glyphicon-earphone"></span> CALL: +254 706 555 585</h4>
 
-    <div class="text-center blink_me">
-      <i class="fa fa-plus-square" aria-hidden="true">Accepting projects</i>
-    </div>
 		<div class="footnote">
       <h5> &#169; Kahurani 2017</h5>
 		</div>

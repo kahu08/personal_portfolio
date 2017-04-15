@@ -16,10 +16,35 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-body{
-  background-color:rgba(0, 0, 0, 0.2);
+// .rest{
+//   background-color:rgba(0, 0, 0, 0.2);
+// }
+
+.landing{
+  max-width: 100%;
+   max-height: 100%;
+   filter: brightness(27%);
+}
+#name{
+  z-index: 100;
+  position: absolute;
+  color: rgba(29, 230, 181, 0.77);
+  font-size: 74px;
+  font-weight: bold;
+  left: 370px;
+  top: 430px;
+font-family: 'Courgette', cursive;
 }
 /*About styling*/
+#about{
+  color: #000000 !important;
+    line-height: 60px!important;
+    font-size: 1em!important;
+    letter-spacing: 4px;
+    padding-top: 0px !important;
+    text-align: center;
+    // filter: brightness(40%);
+}
 ul {
     list-style-type: none;
 }
@@ -221,16 +246,15 @@ figure.hover figcaption {
 
 /*FOOTER STYLING*/
 .blink_me{
-  color:green;
-  // text-align:center;
-  // float: center;
-  background-color: black;
+  color: rgba(29, 230, 181, 0.77);
+  font-size:50px;
 }
 
 #footer {
     // padding: 30px;
     // background-color: #067BC2;
-    background-color: black;
+    background-image: url('/assets/ranges.jpeg');
+    // background-color: black;
     color: white;
     text-align: center;
 }
