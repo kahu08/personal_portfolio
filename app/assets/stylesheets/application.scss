@@ -247,13 +247,17 @@ figure.hover figcaption {
 /*FOOTER STYLING*/
 .blink_me{
   color: rgba(29, 230, 181, 0.77);
-  font-size:50px;
+  font-size:20px;
 }
 
 #footer {
-    // padding: 30px;
+    padding: 30px;
     // background-color: #067BC2;
-    background-image: url('/assets/ranges.jpeg');
+    background-image: url('/assets/footer.jpeg');
+    // max-width: 100%;
+    //  max-height: 100%;
+    background-size: cover;
+    filter: brightness(27%);
     // background-color: black;
     color: white;
     text-align: center;
