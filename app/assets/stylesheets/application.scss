@@ -16,9 +16,166 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-// .rest{
-//   background-color:rgba(0, 0, 0, 0.2);
-// }
+@mixin small {
+  @media only screen and (max-width: 766px) {
+    @content;
+  }
+}
+/********************navbar***********************************/
+// colores
+$color: #8f8f8f;
+$color2: #e8f380;
+
+// Navigation
+.main_h {
+  position: fixed;
+  max-height: 70px;
+  z-index: 999;
+  width: 100%;
+  padding-top: 17px;
+  background: none;
+  overflow: hidden;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  opacity: 0;
+  top: -100px;
+  padding-bottom: 6px;
+
+}
+
+.open-nav {
+  max-height: 400px !important;
+  .mobile-toggle {
+    transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+  }
+}
+
+.sticky {
+  background-color: rgba(255, 255, 255, 0.93);
+  opacity: 1;
+  top: 0px;
+  border-bottom: 1px solid lighten($color, 30%);
+}
+
+.logo {
+  width: 50px;
+  font-size: 25px;
+  color: $color;
+  text-transform: uppercase;
+  float: left;
+  display: block;
+  margin-top: 0;
+  line-height: 1;
+  margin-bottom: 10px;
+  @include small {
+    float: none;
+  }
+}
+
+nav {
+  float: right;
+  width: 60%;
+  @include small {
+    width: 100%;
+  }
+
+  ul {
+    list-style: none;
+    overflow: hidden;
+    text-align: right;
+    float: right;
+    @include small {
+      padding-top: 10px;
+      margin-bottom: 22px;
+      float: left;
+      text-align: center;
+      width: 100%;
+    }
+
+    li {
+      display: inline-block;
+      margin-left: 35px;
+      line-height: 1.5;
+      @include small {
+        width: 100%;
+        padding: 7px 0;
+        margin: 0;
+      }
+    }
+    a {
+      color: #888888;
+      text-transform: uppercase;
+      font-size: 12px;
+    }
+  }
+}
+
+.mobile-toggle {
+  display: none;
+  cursor: pointer;
+  font-size: 20px;
+  position: absolute;
+  right: 22px;
+  top: 0;
+  width: 30px;
+  -webkit-transition: all 200ms ease-in;
+  -moz-transition: all 200ms ease-in;
+  transition: all 200ms ease-in;
+  @include small {
+    display: block;
+  }
+
+  span {
+    width: 30px;
+    height: 4px;
+    margin-bottom: 6px;
+    border-radius: 1000px;
+    background: $color;
+    display: block;
+  }
+}
+
+.row {
+  width: 100%;
+  max-width: 999px;
+  margin: 0 auto;
+  position: relative;
+}
+
+
+
+@-webkit-keyframes scroll {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px);
+  }
+}
+
+
+@keyframes scroll {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+    -ms-transform: translateY(20px);
+    transform: translateY(20px);
+  }
+}
+
+/********************End of navbar***********************************/
+
 
 .landing{
   max-width: 100%;
@@ -29,10 +186,10 @@
   z-index: 100;
   position: absolute;
   color: rgba(29, 230, 181, 0.77);
-  font-size: 74px;
+  font-size: 82px;
   font-weight: bold;
   left: 370px;
-  top: 430px;
+  top: 350px;
 font-family: 'Courgette', cursive;
 }
 /*About styling*/
@@ -43,15 +200,10 @@ font-family: 'Courgette', cursive;
     letter-spacing: 4px;
     padding-top: 0px !important;
     text-align: center;
-    // filter: brightness(40%);
 }
 ul {
     list-style-type: none;
 }
-
-// #skills{
-//   .
-// }
 
 .top {
     width: 400px;
@@ -195,96 +347,19 @@ figure.hover figcaption {
 #footer li {
     list-style: none;
 }
-
-.icon-button {
-    background-color: white;
-    border-radius: 3.6rem;
-    cursor: pointer;
-    display: inline-block;
-    font-size: 2.0rem;
-    height: 3.6rem;
-    line-height: 3.6rem;
-    margin: 0 5px;
-    position: relative;
-    text-align: center;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    width: 3.6rem;
+/*social media icons styling*/
+.fa {
+  z-index: 100;
 }
-
-
-/* Circle */
-
-.icon-button span {
-    border-radius: 0;
-    display: block;
-    height: 0;
-    left: 50%;
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
-    width: 0;
+.fa-github {
+  color: black;
+  font-size: 250px;
 }
-
-.icon-button:hover span {
-    width: 3.6rem;
-    height: 3.6rem;
-    border-radius: 3.6rem;
-    margin: -1.8rem;
+.fa-github:hover {
+    opacity: 0.7;
+    color: rgba(29, 230, 181, 0.77);
 }
-
-.twitter span {
-    background-color: #4099ff;
-}
-
-.facebook span {
-    background-color: #3B5998;
-}
-
-.google-plus span {
-    background-color: #db5a3c;
-}
-
-
-/* Icons */
-
-.icon-button i {
-    background: none;
-    color: white;
-    height: 3.6rem;
-    left: 0;
-    line-height: 3.6rem;
-    position: absolute;
-    top: 0;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
-    width: 3.6rem;
-    z-index: 10;
-}
-
-.icon-button .ion-social-twitter {
-    color: #4099ff;
-}
-
-.icon-button .ion-social-facebook {
-    color: #3B5998;
-}
-
-.icon-button .ion-social-googleplus {
-    color: #db5a3c;
-}
-
-.icon-button:hover .ion-social-twitter, .icon-button:hover .ion-social-facebook, .icon-button:hover .ion-social-googleplus {
-    color: white;
-}
+/*End of social media styling*/
 
 .footnote {
     // background-color: #067BC2;
