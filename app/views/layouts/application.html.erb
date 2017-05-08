@@ -13,39 +13,25 @@
     </head>
 
     <body>
-        <div class="container-fluid">
+        <div id="home">
 
-            <!-- beginning of navbar -->
-            <%= render("/layouts/navigation")%>
+            <div class="container-fluid">
 
-            <%= flash[:notice]%>
+                <!-- beginning of navbar -->
+                <%= render("/layouts/navigation")%>
 
-            <%= flash[:alert]%>
+                <%= flash[:notice]%>
 
-            <!-- content -->
-            <%= yield %>
-            <div class="text-center" style="background-color:black; padding:50px; font-size:50px;">
-                <i class="fa fa-plus-square blink_me" aria-hidden="true">Accepting projects</i>
-            </div>
-            <a href="#" class="fa fa-github"></a>
+                <%= flash[:alert]%>
 
-            <!-- footer -->
-            <div id="footer">
-                <i><a href="#" class="fa fa-github fa-4x"></a></i>
-                <a href="#" class="fa fa-linkedin"></a>
-                <a href="#" class="fa fa-facebook"></a>
-                <h3>Contact Me:</h3>
-                <h4>
-                    <span class="glyphicon glyphicon-envelope"></span>
-                    EMAIL: peterkahurani@gmail.com</h4>
-                <h4>
-                    <span class="glyphicon glyphicon-earphone"></span>
-                    CALL: +254 706 555 585</h4>
+                <!-- content -->
+                <%= yield %>
+                <div class="text-center" style="background-color:black; padding:50px; font-size:50px;">
+                    <i class="fa fa-plus-square blink_me" aria-hidden="true">Accepting projects</i>
+                </div>
 
-            </div>
-            <div class="footnote">
-                <h5>
-                    &#169; Kahurani 2017</h5>
+                <!-- footer -->
+                <%= render ("/layouts/footer")%>
             </div>
         </div>
     </body>
