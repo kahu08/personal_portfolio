@@ -4,35 +4,32 @@
         <title>PersonalPortfolio</title>
         <%= csrf_meta_tags %>
 
-        <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-        <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
         <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
         <script src="https://use.fontawesome.com/59c76c05a4.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+        <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     </head>
 
     <body>
         <div id="home">
-
-            <div class="container-fluid">
-
                 <!-- beginning of navbar -->
-                <%= render("/layouts/navigation")%>
+                <div class="container-fluid">
 
                 <%= flash[:notice]%>
 
                 <%= flash[:alert]%>
 
                 <!-- content -->
+              </div>
                 <%= yield %>
-                <div class="text-center" style="background-color:black; padding:50px; font-size:50px;">
+                <div class="text-center" style="background-color:black; padding:50px;">
                     <i class="fa fa-plus-square blink_me" aria-hidden="true">Accepting projects</i>
                 </div>
 
                 <!-- footer -->
                 <%= render ("/layouts/footer")%>
-            </div>
         </div>
     </body>
 </html>

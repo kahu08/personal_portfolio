@@ -1,4 +1,7 @@
-<h1>This are the projects for:</h1>
+<%= render("/layouts/navigation")%>
+<div class="container">
+
+  <h1>This are the projects for:</h1>
 <h2><%= @skill.language %></h2>
 
   <% if @skill.projects.any? %>
@@ -39,3 +42,4 @@
   <% end %>
 
   <p><%= link_to "Return to skill", skills_path %></p>
+</div>
