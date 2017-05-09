@@ -51,6 +51,8 @@
     padding-top: 0 !important;
     text-align: center;
     font-size: 50px !important;
+    font-family: 'Courgette', cursive;
+
 }
 #about-me{
   text-align: center;
@@ -72,6 +74,7 @@ ul {
 
 .flag, .computer, .gear, .rugby, .food {
     background-color: #1de6b5;
+    width: 100%;
 }
 
 .about-cards {
@@ -96,6 +99,7 @@ ul {
     position: relative;
     z-index: 10;
     margin: -15px 0;
+    filter: brightness(55%);
 }
 
 .about-cards figure figcaption {
@@ -164,6 +168,10 @@ figure.hover figcaption {
 /*End of styling*/
 #skills li{
   font-size: 40px;
+}
+
+.skill-images img {
+  width: 50%;
 }
 /*FOOTER STYLING*/
 .blink_me {

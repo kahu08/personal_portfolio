@@ -36,13 +36,13 @@
 </nav>
 
 <br>
-<div class="container-fluid">
+<div class="container">
     <div id="about-me">
         <h1 id="about">ABOUT</h1>
         <hr style="color:black; font-size:50px;">
 
         <br>
-        <h3>Welcome to my portfolio where I try to show the world a bit about myself</h3>
+        <h2>Welcome to my portfolio where I try to show the world a bit about myself</h2>
         <br>
         <h4>(Hover over the images and learn something about myself)</h4>
         <br>
@@ -53,7 +53,7 @@
                         <li>
                             <figure>
 
-                                <%=image_tag("kenya-flag.png", class:"top") %>
+                                <%=image_tag("flag2.jpg", class:"top") %>
                                 <figcaption>
                                     <h2>+254 is my Land!</h2>
                                     <p>I am a proud citizen of Kenya.</p>
@@ -95,7 +95,7 @@
             </div>
 
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-offset-1 col-md-4">
                     <ul class="rugby about-cards effect">
                         <li>
                             <figure>
@@ -110,7 +110,7 @@
                     </ul>
                 </div>
 
-                <div class="col-md-4">
+                <div class="col-md-offset-2 col-md-4">
                     <ul class="food about-cards effect">
                         <li>
                             <figure>
@@ -138,9 +138,17 @@
 
         <div id="skills">
             <ul>
+              <div class="row">
+
                 <% @skills.each do |skill|%>
-                <li><%= link_to skill_path(skill) do%><%= image_tag(skill.image.url(:medium))%><%= skill.language %><% end %></li>
+
+                <div class="col-md-4 skill-images">
+                  <li><%= link_to skill_path(skill) do%><%= image_tag(skill.image.url(:medium))%><% end %>
+                    <h3><strong><%=skill.language%></strong></h3>
+                  </li>
+                </div>
                 <%end%>
+              </div>
             </ul>
             <% if user_signed_in? %>
             <p><%= link_to "Add language", new_skill_path %></p>
