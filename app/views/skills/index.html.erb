@@ -143,8 +143,9 @@
                 <% @skills.each do |skill|%>
 
                 <div class="col-md-4 skill-images">
-                  <li><%= link_to skill_path(skill) do%><%= image_tag(skill.image.url(:medium))%><% end %>
+                  <li><%= link_to skill_path(skill) do%><%= image_tag(skill.image.url(:medium))%>
                     <h3><strong><%=skill.language%></strong></h3>
+                    <% end %>
                   </li>
                 </div>
                 <%end%>
