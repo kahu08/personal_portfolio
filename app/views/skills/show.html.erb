@@ -21,8 +21,8 @@
             }
           </style>
             <div class="ch-info">
-              <h3><%= link_to project.project_name, skill_project_path(@skill, project) %></h3>
             </div>
+            <h3 style="padding-top:55px; position:absolute; z-index:1; padding-left:28%;"><%= link_to project.project_name, skill_project_path(@skill, project) %></h3>
             </div>
             <% if user_signed_in?%>
                 <%= link_to "Edit", edit_skill_project_path(@skill, project) %> |
