@@ -1,24 +1,24 @@
-# README
+# Peter Kahurani
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is my personal portfolio where i let the world know a bit about myself and show projects i have done.
 
-Things you may want to cover:
 
-* Ruby version
 
-* System dependencies
+### Ruby version
+2.2.3
 
-* Configuration
+### System dependencies
+* postgres
+* rails 5.0.2
 
-* Database creation
+## Configuration
+- clone  this repo and run:
+```
+   -bundle install
+   -rake db:migrate
+  ```
+### Deployment instructions
+The app is deployed to heroku on <https://murmuring-taiga-89223.herokuapp.com>
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Contributors
+ Peter kahurani
